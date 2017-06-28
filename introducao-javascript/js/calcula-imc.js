@@ -33,8 +33,8 @@ for(var i = 0; i < pacientes.length; i++){
    }
 
    if(pesoEhValido && alturaEhValida){
-      var imc = peso / (altura * altura);
-      tdImc.textContent = imc.toFixed(2);
+      var imc = calculaImc(peso, altura);
+      tdImc.textContent = imc;
    }
 }
 
@@ -46,8 +46,9 @@ function mostraMensagem(){
    console.log("Olá, eu fui clicado!");
 }
 
-var botaoAdicionar = document.querySelector("#adicionar-paciente");
+function calculaImc(peso, altura){
+   var imc = 0;
 
-botaoAdicionar.addEventListener("click", function () {
-   console.log("Botão clicado");
-});
+   imc  = peso / (altura * altura);
+   return imc.toFixed(2);
+}
