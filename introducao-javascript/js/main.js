@@ -37,3 +37,17 @@ for(var i = 0; i < pacientes.length; i++){
       tdImc.textContent = imc.toFixed(2);
    }
 }
+
+titulo.addEventListener("click", function(){
+   console.log("Olha que legal, posso chamar uma função anônima!");
+});
+
+function mostraMensagem(){
+   console.log("Olá, eu fui clicado!");
+}
+
+var botaoAdicionar = document.querySelector("#adicionar-paciente");
+
+botaoAdicionar.addEventListener("click", function () {
+   console.log("Botão clicado");
+});
