@@ -22,12 +22,14 @@ for(var i = 0; i < pacientes.length; i++){
       tdAltura.textContent = "Altura inválida!";
       alturaEhValida = false;
       tdImc.textContent = "Verifique a altura!";
+      paciente.classList.add("paciente-invalido");
    }
 
    if(peso < 0 || peso > 999){
       tdPeso.textContent = "Peso inválido!";
       pesoEhValido = false;
       tdImc.textContent = "Verifique o peso!"
+      paciente.classList.add("paciente-invalido");
    }
 
    if(pesoEhValido && alturaEhValida){
