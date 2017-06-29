@@ -3,9 +3,15 @@ var pacientes = document.querySelectorAll(".paciente");
 var tabela = document.querySelector("table");
 
 tabela.addEventListener("dblclick", function(){
-   var alvoEvento = event.target;
-   var paiDoAlvo = alvoEvento.parentNode;
-   paiDoAlvo.remove();
+   var alvoDoClique = event.target;
+   var paiDoAlvo = alvoDoClique.parentNode;
+
+   paiDoAlvo.classList.add("fadeOut");
+
+
+   setTimeout(function () {
+      paiDoAlvo.remove();
+   }, 500);
 });
 
 // pacientes.forEach(function (paciente) {
