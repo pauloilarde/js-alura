@@ -9,7 +9,12 @@ botaoAdicionar.addEventListener("click", function () {
 
    xhr.addEventListener("load", function () {
       var resposta = xhr.responseText;
-      var pacientes = JSON.parseres(resposta);
+      var pacientes = JSON.parse(resposta);
+
+
+      pacientes.forEach(function (paciente) {
+         adicionaPacienteNaTabela(paciente);
+      });
    });
 
    xhr.send();
